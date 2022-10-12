@@ -1,0 +1,17 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME}.php -f
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+
+RewriteRule ^([^\.]+)$ $1.html [NC,L]
+
+#RewriteCond %{REQUEST_FILENAME}.html -f
+
+#RewriteCond %{REQUEST_URI}.html !/s
+
+#RewriteRule ^(.*)$ $1\.html
+#RewriteRule plancheck/^([0-9A-Za-z]+)/([0-9A-Za-z]+)/(\d+)?$ straight-t-plancheck/index.php?v=$1&p=$2&c=$3 [L,QSA,NC]
+#RewriteRule ^plancheck/([^/]*)/([^/]*)/([0-9]+)$ straight-t-plancheck/index.php?v=$1&p=$2&c=$3 [L]
